@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if let postsTableViewController = window?.rootViewController as? PostsTableViewController{
-            postsTableViewController.postModelController = PostModelController()
+            postsTableViewController.postsModelController = PostsModelController()
         }
         return true
     }

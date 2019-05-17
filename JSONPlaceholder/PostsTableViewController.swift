@@ -9,38 +9,29 @@
 import UIKit
 
 class PostsTableViewController: UITableViewController {
-
-    //var posts: Posts = []
-    var postModelController: PostModelController!
-    let posts = PostModelController.init()
-
+    // MARK: Model
+    var postsModelController: PostsModelController!
+    
+    // MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        dump(posts)
-        //let url = "https://jsonplaceholder.typicode.com/posts"
-        //posts = try! Posts.init(fromURL: URL(string: url)!)
-        //dump(posts)
-        //print(posts[0].body)
-
-
-
+        dump(postsModelController.posts)
     }
 
-    // MARK: - Table view data source
+    // MARK: Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.posts.count
+        return postsModelController.posts.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "post", for: indexPath)
 
-        // Configure the cell...
-        cell.textLabel?.text = posts.posts[indexPath.row].title
+        cell.textLabel?.text = postsModelController.posts[indexPath.row].title
         return cell
     }
     

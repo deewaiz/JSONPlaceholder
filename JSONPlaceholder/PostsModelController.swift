@@ -8,7 +8,6 @@
 
 import Foundation
 
-class PostModelController{
-    var posts: Posts = try! Posts.init(fromURL: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
-
+class PostsModelController{
+    var posts: PostsModel = try! PostsModel.init(fromURL: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
 }

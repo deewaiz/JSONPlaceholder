@@ -8,9 +8,9 @@
 
 import Foundation
 
-typealias Posts = [Post]
+typealias PostsModel = [PostModel]
 
-struct Post: Codable {
+struct PostModel: Codable {
     let userID: Int
     let id:     Int
     let title:  String
@@ -24,46 +24,11 @@ struct Post: Codable {
     }
 }
 
-// MARK: Convenience initializers and mutators for one post
-extension Post {
+// MARK: Convenience initializers and mutators
+extension Array where Element == PostsModel.Element {
     init(data: Data) throws {
-        self = try JSONDecoder().decode(Post.self, from: data)
-    }
-    
-    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
-        guard let data = json.data(using: encoding) else {
-            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
-        }
-        try self.init(data: data)
-    }
-    
-    init(fromURL url: URL) throws {
-        try self.init(data: try Data(contentsOf: url))
-    }
-    
-    func with(userID: Int?    = nil,
-              id:     Int?    = nil,
-              title:  String? = nil,
-              body:   String? = nil) -> Post {
-        return Post(userID: userID ?? self.userID,
-                    id:     id ?? self.id,
-                    title:  title ?? self.title,
-                    body:   body ?? self.body)
-    }
-    
-    func jsonData() throws -> Data {
-        return try JSONEncoder().encode(self)
-    }
-    
-    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
-    }
-}
-
-// MARK: Convenience initializers and mutators for many posts
-extension Array where Element == Posts.Element {
-    init(data: Data) throws {
-        self = try JSONDecoder().decode(Posts.self, from: data)
+        print("PostsModel")
+        self = try JSONDecoder().decode(PostsModel.self, from: data)
     }
     
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -102,7 +67,7 @@ extension URLSession {
         }
     }
     
-    func postsTask(with url: URL, completionHandler: @escaping (Posts?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+    func postsTask(with url: URL, completionHandler: @escaping (PostsModel?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         return self.codableTask(with: url, completionHandler: completionHandler)
     }
 }
