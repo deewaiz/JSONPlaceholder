@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CE4BC54E228E2456009C858C /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC54D228E2456009C858C /* PostsTableViewController.swift */; };
-		CE4BC550228E2650009C858C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4BC54F228E2650009C858C /* Default-568h@2x.png */; };
 		CE4BC552228E641D009C858C /* PostsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC551228E641D009C858C /* PostsModelController.swift */; };
+		CE4BC5542292159C009C858C /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC5532292159C009C858C /* PostDetailViewController.swift */; };
 		CE76A98922845CCA00BCD56E /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76A98822845CCA00BCD56E /* PostsModel.swift */; };
 		CE80EEF02283C93C00743948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80EEEF2283C93C00743948 /* AppDelegate.swift */; };
-		CE80EEF22283C93C00743948 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80EEF12283C93C00743948 /* ViewController.swift */; };
 		CE80EEF52283C93C00743948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE80EEF32283C93C00743948 /* Main.storyboard */; };
 		CE80EEF72283C93E00743948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE80EEF62283C93E00743948 /* Assets.xcassets */; };
 		CE80EEFA2283C93E00743948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE80EEF82283C93E00743948 /* LaunchScreen.storyboard */; };
@@ -20,12 +19,11 @@
 
 /* Begin PBXFileReference section */
 		CE4BC54D228E2456009C858C /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
-		CE4BC54F228E2650009C858C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CE4BC551228E641D009C858C /* PostsModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModelController.swift; sourceTree = "<group>"; };
+		CE4BC5532292159C009C858C /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		CE76A98822845CCA00BCD56E /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
 		CE80EEEC2283C93C00743948 /* JSONPlaceholder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONPlaceholder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE80EEEF2283C93C00743948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE80EEF12283C93C00743948 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE80EEF42283C93C00743948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE80EEF62283C93E00743948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE80EEF92283C93E00743948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 		CE80EEE32283C93C00743948 = {
 			isa = PBXGroup;
 			children = (
-				CE4BC54F228E2650009C858C /* Default-568h@2x.png */,
 				CE80EEEE2283C93C00743948 /* JSONPlaceholder */,
 				CE80EEED2283C93C00743948 /* Products */,
 			);
@@ -79,7 +76,7 @@
 				CE76A98822845CCA00BCD56E /* PostsModel.swift */,
 				CE4BC551228E641D009C858C /* PostsModelController.swift */,
 				CE4BC54D228E2456009C858C /* PostsTableViewController.swift */,
-				CE80EEF12283C93C00743948 /* ViewController.swift */,
+				CE4BC5532292159C009C858C /* PostDetailViewController.swift */,
 			);
 			path = JSONPlaceholder;
 			sourceTree = "<group>";
@@ -143,7 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE80EEFA2283C93E00743948 /* LaunchScreen.storyboard in Resources */,
-				CE4BC550228E2650009C858C /* Default-568h@2x.png in Resources */,
 				CE80EEF72283C93E00743948 /* Assets.xcassets in Resources */,
 				CE80EEF52283C93C00743948 /* Main.storyboard in Resources */,
 			);
@@ -156,9 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE80EEF22283C93C00743948 /* ViewController.swift in Sources */,
 				CE4BC552228E641D009C858C /* PostsModelController.swift in Sources */,
 				CE80EEF02283C93C00743948 /* AppDelegate.swift in Sources */,
+				CE4BC5542292159C009C858C /* PostDetailViewController.swift in Sources */,
 				CE76A98922845CCA00BCD56E /* PostsModel.swift in Sources */,
 				CE4BC54E228E2456009C858C /* PostsTableViewController.swift in Sources */,
 			);
